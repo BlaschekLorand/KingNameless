@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>King Nameless's Land Division</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/levels.js" defer></script>
+  <script src="js/engine.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="#" id="home-link">King Nameless</a>
+    <button id="fullscreen">Fullscreen</button>
+  </header>
+  <main>
+    <section id="menu">
+      <h1>Every house gets an estate.</h1>
+      <p>Mark the land that belongs to each house and separate the estates with walls.</p>
+      <div id="cards"></div>
+      <ul class="rules">
+        <li>Every house gets one connected estate whose size equals its number.</li>
+        <li>Every estate contains exactly one house.</li>
+        <li>Decide every cell: land or wall.</li>
+        <li>All walls must be connected, and they must not form a 2 × 2 block.</li>
+      </ul>
+    </section>
+    <section id="game" hidden>
+      <div class="info">
+        <div class="topline">
+          <button id="back">← Levels</button>
+          <button id="reset">Restart</button>
+        </div>
+        <h1 id="title"></h1>
+        <p id="progress"></p>
+        <p class="help">Left click: land<br>Right click: wall<br>Click the same mark again to clear it.</p>
+        <ul class="rules">
+          <li>Each house gets a connected estate of its number.</li>
+          <li>One house per estate.</li>
+          <li>Walls are connected, with no 2 × 2 wall block.</li>
+        </ul>
+        <p id="status" role="status" aria-live="polite"></p>
+      </div>
+      <div id="board" role="group" aria-label="Game board"></div>
+    </section>
+    <div id="win" hidden>
+      <div class="win-box">
+        <h2>You divided the land!</h2>
+        <p id="win-text"></p>
+        <div class="topline">
+          <button id="win-again">Play again</button>
+          <button id="win-menu">Levels</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
